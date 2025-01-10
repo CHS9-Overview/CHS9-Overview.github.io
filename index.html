@@ -5,138 +5,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Rakkas|DM Serif Text|Limelight|Playfair|Prata' rel='stylesheet'>
+    
   </head>
   <body id="body">
-    <script>
-      function toggle(sec) {
-        if (sec == "1") {
-          document.getElementById('1').style = "display:block";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "2") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:block";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "3") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:block";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "4") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:block";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "5") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:block";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "6") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:block";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "7") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:block";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "8") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:block";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "9") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:block";
-          document.getElementById('10').style="display:none";
-        }
-        if (sec == "10") {
-          document.getElementById('1').style = "display:none";
-          document.getElementById('2').style="display:none";
-          document.getElementById('3').style = "display:none";
-          document.getElementById('4').style="display:none";
-          document.getElementById('5').style="display:none";
-          document.getElementById('6').style="display:none";
-          document.getElementById('7').style="display:none";
-          document.getElementById('8').style="display:none";
-          document.getElementById('9').style="display:none";
-          document.getElementById('10').style="display:block";
-        }
-      }
-    </script>
     <div class="topnav">
       <a class="active" href="index.html">Home</a>
-      <a onclick="toggle('7')" href="#7">About Us</a>
-      <a onclick="toggle('8')"href="#8">Contact</a>
-      <a onclick="toggle('9')"href="#9">News</a>
-      <a onclick="toggle('10')"href="#10">Values</a>
+      <a onclick="toggle(7)" href="#7">About Us</a>
+      <a onclick="toggle(8)"href="#8">Contact</a>
+      <a onclick="toggle(9)"href="#9">News</a>
+      <a onclick="toggle(10)"href="#10">Values</a>
       <div>
         <input type="text" id="searchQuery" placeholder="Search about CHS9" />
         <button id="mainSearch" onclick="performSearch()">
@@ -158,7 +35,7 @@
     <table id="choices">
       <tr>
         <td>
-          <a onclick="toggle('1')" href="#1">
+          <a onclick="toggle(1)" href="#1">
             <div id="roundedSquare">
               <img id="busIcon" class="icons" src="directions_bus_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
               <span class="choicesText" id="schedules">Schedules</span>
@@ -166,7 +43,7 @@
           </a>
         </td>
         <td>
-          <a onclick="toggle('2')" href="#2">
+          <a onclick="toggle(2)" href="#2">
             <div id="roundedSquare">
               <img class="icons" src="lunch_dining_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
               <span class="choicesText">Lunch</span>
@@ -176,7 +53,7 @@
       </tr>
       <tr>
         <td>
-          <a onclick="toggle('3')" href="#3">
+          <a onclick="toggle(3)" href="#3">
             <div id="roundedSquare">
               <img class="icons" src="calendar_month_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
               <span class="choicesText" id="calendars">Calendars</span>
@@ -184,7 +61,7 @@
           </a>
         </td>
         <td>
-          <a onclick="toggle('4')" href="#4">
+          <a onclick="toggle(4)" href="#4">
             <div id="roundedSquare">
               <img class="icons" src="supervisor_account_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
               <span class="choicesText">Staff</span>
@@ -194,7 +71,7 @@
       </tr>
       <tr>
         <td>
-          <a onclick="toggle('5')" href="#5">
+          <a onclick="toggle(5)" href="#5">
             <div id="roundedSquare">
               <img class="icons" src="family_restroom_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
               <span class="choicesText" id="resources"> Parent <br>Resources </span>
@@ -202,7 +79,7 @@
           </a>
         </td>
         <td>
-          <a onclick="toggle('6')" href="#6">
+          <a onclick="toggle(6)" href="#6">
             <div id="roundedSquare">
               <img class="icons" src="school_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png ">
               <span class="choicesText" id="resources">Student <br>Resources </span>
