@@ -223,7 +223,7 @@ a {
   font-size: 4.5vw;
   cursor: pointer;
   width: 49%;
-  height: 10%;
+  height: fit-content%;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -260,12 +260,26 @@ a {
   60% {background-color: #f9f980;}
   80% {background-color: #b4bbb6;}
 }
-h2:target {
-  animation-name: highlight;
-  animation-duration: 2.75s;
+.highlight{
+  animation: highlight 2.75s;
 }
 
 
-.even {
+/* .even {
   background-color: #D3D9D4;
+} */
+
+.caption{
+  text-align: center;
+  font-size: 3.5vw;
+}
+
+#news{
+  stroke-width: 0px;
+}
+
+.newsCell{
+  width: 25%;
+  text-align: center;
+  height:max-content;
 }

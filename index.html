@@ -1,122 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CHS9 Overview</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Rakkas|DM Serif Text|Limelight|Playfair|Prata' rel='stylesheet'>
-    
-  </head>
-  <body id="body">
-    <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a onclick="toggle(7)" href="#7">About Us</a>
-      <a onclick="toggle(8)"href="#8">Contact</a>
-      <a onclick="toggle(9)"href="#9">News</a>
-      <a onclick="toggle(10)"href="#10">Values</a>
-      <div>
-        <input type="text" id="searchQuery" placeholder="Search about CHS9" />
-        <button id="mainSearch" onclick="performSearch()">
-          <img id="searchIcon" src="https://codehs.com/uploads/645e73a8d9720e134d463770b168dbc8">
-        </button>
+ <head>
+  <title>CHS9 Overview</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Rakkas|DM Serif Text|Limelight|Playfair|Prata' rel='stylesheet'>
+ </head>
+ <body id="body">
+  <div class="topnav">
+   <a class="active" href="index.html">Home</a>
+   <a onclick="toggle(7)" href="#7">About Us</a>
+   <a onclick="toggle(8)" href="#8">Contact</a>
+   <a onclick="toggle(9)" href="#9">News</a>
+   <a onclick="toggle(10)" href="#10">Values</a>
+   <div>
+    <input type="text" id="searchQuery" placeholder="Search about CHS9" />
+    <button id="mainSearch" onclick="performSearch()">
+     <img id="searchIcon" src="https://codehs.com/uploads/645e73a8d9720e134d463770b168dbc8">
+    </button>
+   </div>
+   <div id="searchResults"></div>
+  </div>
+  <p id="bigImage">
+   <img id="mainImage" src="https://codehs.com/uploads/45cc3e244b5627be1d536058f3a8ad80" "alt=" CHS9" width="80%">
+  </p>
+  <h2>What's Happening?</h2>
+  <div class="image-gallery">
+   <img src="https://codehs.com/uploads/2939d4d00ffa4af32b2643aa90db06a7" alt="October Everyday Champions">
+   <img src="https://codehs.com/uploads/cef07e705e814b1d7e14df6fd52bd350" alt="October Para Spotlight">
+   <img src="https://codehs.com/uploads/63457184a7b6594b9c1b5f107017066f" alt="October Teacher Spotlight">
+  </div>
+  <h2>More Options</h2>
+  <table id="choices">
+   <tr>
+    <td>
+     <a onclick="toggle(1)" href="#1">
+      <div id="roundedSquare">
+       <img id="busIcon" class="icons" src="directions_bus_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
+       <span class="choicesText" id="schedules">Schedules</span>
       </div>
-      <div id="searchResults"></div>
-    </div>
-    <p id="bigImage">
-      <img id="mainImage" src="https://codehs.com/uploads/45cc3e244b5627be1d536058f3a8ad80" "alt=" CHS9" width="80%">
-    </p>
-    <h2>What's Happening?</h2>
-    <div class="image-gallery">
-      <img src="https://codehs.com/uploads/2939d4d00ffa4af32b2643aa90db06a7" alt="October Everyday Champions">
-      <img src="https://codehs.com/uploads/cef07e705e814b1d7e14df6fd52bd350" alt="October Para Spotlight">
-      <img src="https://codehs.com/uploads/63457184a7b6594b9c1b5f107017066f" alt="October Teacher Spotlight">
-    </div>
-    <h2>More Options</h2>
-    <table id="choices">
-      <tr>
-        <td>
-          <a onclick="toggle(1)" href="#1">
-            <div id="roundedSquare">
-              <img id="busIcon" class="icons" src="directions_bus_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
-              <span class="choicesText" id="schedules">Schedules</span>
-            </div>
-          </a>
-        </td>
-        <td>
-          <a onclick="toggle(2)" href="#2">
-            <div id="roundedSquare">
-              <img class="icons" src="lunch_dining_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
-              <span class="choicesText">Lunch</span>
-            </div>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a onclick="toggle(3)" href="#3">
-            <div id="roundedSquare">
-              <img class="icons" src="calendar_month_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
-              <span class="choicesText" id="calendars">Calendars</span>
-            </div>
-          </a>
-        </td>
-        <td>
-          <a onclick="toggle(4)" href="#4">
-            <div id="roundedSquare">
-              <img class="icons" src="supervisor_account_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
-              <span class="choicesText">Staff</span>
-            </div>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a onclick="toggle(5)" href="#5">
-            <div id="roundedSquare">
-              <img class="icons" src="family_restroom_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
-              <span class="choicesText" id="resources"> Parent <br>Resources </span>
-            </div>
-          </a>
-        </td>
-        <td>
-          <a onclick="toggle(6)" href="#6">
-            <div id="roundedSquare">
-              <img class="icons" src="school_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png ">
-              <span class="choicesText" id="resources">Student <br>Resources </span>
-            </div>
-          </a>
-        </td>
-      </tr>
-    </table>
-    <div class="odd">
-      <h2 id='1'>Schedules</h2>
-    </div>
-    <div>
-      <h2 class="even" id='2'>Lunch</h2>
-    </div>
-    <div>
-      <h2 id='3'>Calendars</h2>
-    </div>
-    <div>
-      <h2 class="even" id='4'>Staff</h2>
-    </div>
-    <div class="odd">
-      <h2 id='5'>Parent Resources</h2>
-    </div>
-    <div >
-      <h2 class="even" id='6'>Student Resources</h2>
-    </div>
-    <div>
-      <h2 id='7'>About Us</h2>
-    </div>
-    <div>
-      <h2 class="even" id='8'>Contact</h2>
-    </div>
-    <div>
-      <h2 id='9'>News</h2>
-    </div>
-    <div>
-      <h2 class="even" id='10'>CISD Core Values</h2>
-    </div>
-  </body>
+     </a>
+    </td>
+    <td>
+     <a onclick="toggle(2)" href="#2">
+      <div id="roundedSquare">
+       <img class="icons" src="lunch_dining_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
+       <span class="choicesText">Lunch</span>
+      </div>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a onclick="toggle(3)" href="#3">
+      <div id="roundedSquare">
+       <img class="icons" src="calendar_month_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
+       <span class="choicesText" id="calendars">Calendars</span>
+      </div>
+     </a>
+    </td>
+    <td>
+     <a onclick="toggle(4)" href="#4">
+      <div id="roundedSquare">
+       <img class="icons" src="supervisor_account_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
+       <span class="choicesText">Staff</span>
+      </div>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a onclick="toggle(5)" href="#5">
+      <div id="roundedSquare">
+       <img class="icons" src="family_restroom_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png">
+       <span class="choicesText" id="resources"> Parent <br>Resources </span>
+      </div>
+     </a>
+    </td>
+    <td>
+     <a onclick="toggle(6)" href="#6">
+      <div id="roundedSquare">
+       <img class="icons" src="school_53dp_3B4F73_FILL0_wght400_GRAD0_opsz48.png ">
+       <span class="choicesText" id="resources">Student <br>Resources </span>
+      </div>
+     </a>
+    </td>
+   </tr>
+  </table>
+  <div id='1'>
+   <h2>Schedules</h2>
+   <button class="buttons">
+    <a href="https://drive.google.com/file/d/13kNORVZJ8OUd39eUHWmkEkR8FwEa9mb1/view?usp=drive_link"> Shuttle Schedules </a>
+   </button>
+   <button class="buttons">
+    <a href="https://docs.google.com/document/d/1t6dKIiZvi4mAEmd2z_-dYZ4S9QUjw29TyIpBjpbhM_c/edit?usp=sharing"> Bell Schedule </a>
+   </button>
+  </div>
+  <div id='2'>
+   <h2 class="even">Lunch</h2>
+   <button class="buttons">
+    <a href="https://www.schoolpay.com/login"> SchoolPay </a>
+   </button>
+   <button class="buttons">
+    <a href="https://coppellisd.nutrislice.com/menu/coppell-hs-9"> Lunch Menu </a>
+   </button>
+  </div>
+  <div id='3'>
+   <h2>Calendars</h2>
+   <button class="buttons">
+    <a href="https://drive.google.com/file/d/1Svl6ncxLftaTxH248wlXdaxZwqFzpwFb/view?usp=sharing"> A/B Day Calendar </a>
+   </button>
+   <button class="buttons">
+    <a href="https://drive.google.com/file/d/1aoqGIFc_CADmm652Ge8HMcxcc12ym3bv/view?usp=sharing"> 2024-2025 Calendar </a>
+   </button>
+  </div>
+  <div id='4'>
+   <h2 class="even">Staff</h2>
+   <p class = 'caption'>Access CISD Staff Resources by signing in using your Coppell ISD credentials. </p>
+   <p>
+    <button class="buttons">
+     <a href="https://accounts.coppellisd.com/idp/AuthnEngine#/authn">Resources</a>
+    </button>
+   </p>
+  </div>
+  <div id='5'>
+   <h2>Parent Resources</h2>
+  </div>
+  <div id='6'>
+   <h2 class="even">Student Resources</h2>
+  </div>
+  <div id='10'>
+   <h2 class="even">CISD Core Values</h2>
+  </div>
+  <div id='7'>
+   <h2>About Us</h2>
+  </div>
+  <div id='8'>
+   <h2 class="even">Contact</h2>
+  </div>
+  <div id='9'>
+   <h2>News</h2>
+    <iframe src='https://widgets.sociablekit.com/rss-feed/iframe/25509166' frameborder='0' width='100%' height='800px'>      
+    </iframe>
+  </div>
+ </body>
 </html>
