@@ -2,7 +2,17 @@
   font-family: 'Recoleta';
   src: url('https://codehs.com/uploads/847d7bd8617c18a0782268ac9754dcf0');
 }
-
+#body{
+  width: 99%;
+  max-width: 100%;
+  margin: 0;
+  padding: 1px;
+  position:relative;
+  overflow-x:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body {
   background-color: #D3D9D4;
   /*animation: fadeIn 2s ease-in-out;*/
@@ -27,15 +37,21 @@ body {
 }
 
 #bigImage {
+  overflow: hidden;
   text-align: center;
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 3%;
   margin-bottom: 5.5%;
+  max-width: 100%;
+  display: block;
+  position:relative;
+  overflow-x:hidden;
   /* animation: fadeIn 2s ease-in-out; */
 }
 #mainImage{
-  animation: scroll 3s ease-in ;
+  overflow: hidden;
+  animation: scroll 3s ease-in;
 }
 
 #roundedSquare {
@@ -89,13 +105,13 @@ body {
   color: #2980b9;
 }
 
-.image-gallery {
+.carosuel {
   display: flex;
   flex-direction: row;
   gap: 5%;
   height: 100%;
   width: auto;
-  overflow-x: auto;
+  overflow-x: hidden;
   padding: 10px;
   margin-left: 10%;
   margin-right: 10%;
@@ -286,12 +302,12 @@ a {
 } */
 
 .caption{
-  text-align: right;
-  font-size: 2.5vw;
+  text-align: center;
+  font-size: 1.75vw;
   font-family: 'Prata';
-  margin-top: -15%;
+  margin-top: 0%;
+  color: #ffffff;
 }
-
 
 marquee{
 height: fit-content;
@@ -300,15 +316,103 @@ width: 80%;
 
 .email{
   color: #4e6897;
-  text-align: right;
-  font-size: 3vw;
+  text-align: center;
+  font-size: 1.5vw;
   font-family: 'Prata'
 }
 .contactImg{
-  text-align:left;
-  
+  text-align:center;
 }
 .cImg{
-  width:15%;
+  width:50%;
   margin-top: 1%;
 }
+
+.contactCard {
+  background: #1c1c1c;
+  width: 30%;
+  padding-top: 7.5%;
+  padding-bottom: 7.5%;
+  height: fit-content;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+  /*  
+    * 5px 5px: Horizontal and vertical offset
+    * 10px: Blur radius
+    * rgba(0, 0, 0, 0.5): Shadow color (black with 50% opacity) 
+  */
+
+}
+.contactCard2 {
+  background: #1c1c1c;
+  width: 30%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: fit-content;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+
+#invisContact{
+  border-width: 0px;
+}
+
+
+.carousel {
+    position: relative;
+    width: 270px;
+    height: 160px;
+    overflow: hidden;
+    background-color: #cdcdcd;
+}
+
+.carousel-item .slide-image {
+    width: 270px;
+    height: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 270px;
+    border: none;
+    top: 0;
+    left: 100%;
+}
+
+.carousel-item.active {
+    left: 0;
+    transition: all 0.3s ease-out;
+}
+
+.carousel-item div {
+    height: 100%;
+}
+
+
+/*.semi-circle {
+  width: 100%;
+  height: 100px;
+  background-color:  #A3D9D4; 
+  border-top-left-radius:0%;
+  border-top-right-radius:0%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  z-index: 8;
+}
+.semi-circle2 {
+  width: 100%;
+  height: 100px;
+  background-color:  #A3D9D4; 
+  border-top-left-radius: 50%;
+  border-top-right-radius:50%;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  z-index: 8;
+} */
