@@ -9,9 +9,6 @@
   padding: 1px;
   position:relative;
   overflow-x:hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 body {
   background-color: #D3D9D4;
@@ -105,13 +102,13 @@ body {
   color: #2980b9;
 }
 
-.carosuel {
+.image-gallery {
   display: flex;
   flex-direction: row;
   gap: 5%;
   height: 100%;
   width: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   padding: 10px;
   margin-left: 10%;
   margin-right: 10%;
@@ -254,7 +251,7 @@ a {
   font-size: 4.5vw;
   cursor: pointer;
   width: 49%;
-  height: fit-content%;
+  height: fit-content;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -318,7 +315,9 @@ width: 80%;
   color: #4e6897;
   text-align: center;
   font-size: 1.5vw;
-  font-family: 'Prata'
+  font-family: 'Prata';
+  cursor: pointer;
+  text-decoration: underline;
 }
 .contactImg{
   text-align:center;
@@ -327,74 +326,55 @@ width: 80%;
   width:50%;
   margin-top: 1%;
 }
-
+table{
+  width: 100%;
+  max-height: 100%;
+}
+td{
+  max-width: 33%;
+  height: 100%;
+}
 .contactCard {
   background: #1c1c1c;
-  width: 30%;
-  padding-top: 7.5%;
-  padding-bottom: 7.5%;
-  height: fit-content;
-  margin-top: 5%;
-  margin-bottom: 3%;
-  margin-left: 3%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
-  /*  
-    * 5px 5px: Horizontal and vertical offset
-    * 10px: Blur radius
-    * rgba(0, 0, 0, 0.5): Shadow color (black with 50% opacity) 
-  */
-
-}
-.contactCard2 {
-  background: #1c1c1c;
-  width: 30%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  height: fit-content;
-  margin-top: 5%;
-  margin-bottom: 3%;
-  margin-left: 3%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+  width: 90%;
+  min-height: 100%;
+  margin: 5% 3% 0% 3%;
+  display: flex; /* Add flexbox for height distribution */
+  flex-direction: column; /* Align items vertically */
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, .7);
+  border: 5px solid #ffffff;
 }
 
-#invisContact{
-  border-width: 0px;
+.staffText{
+  color: #232e43;
+  text-align: center;
+  font-size: 2.5vw;
+  font-family: 'Prata';
+  cursor: pointer;
+  font-weight: 600;
 }
 
-
-.carousel {
-    position: relative;
-    width: 270px;
-    height: 160px;
-    overflow: hidden;
-    background-color: #cdcdcd;
+h3{
+  font-family: 'dm serif text';
+  font-weight: 800;
+  text-align: center;
+  color: #4e6897;
+  font-size: 5vw;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  
 }
 
-.carousel-item .slide-image {
-    width: 270px;
-    height: 160px;
-    background-size: cover;
-    background-repeat: no-repeat;
+.contactText{
+  color: #232e43;
+  text-align: center;
+  font-size: 2vw;
+  font-family: 'Prata';
+  cursor: pointer;
+  font-weight: 400;
 }
-
-.carousel-item {
-    position: absolute;
-    width: 100%;
-    height: 270px;
-    border: none;
-    top: 0;
-    left: 100%;
-}
-
-.carousel-item.active {
-    left: 0;
-    transition: all 0.3s ease-out;
-}
-
-.carousel-item div {
-    height: 100%;
-}
-
 
 /*.semi-circle {
   width: 100%;

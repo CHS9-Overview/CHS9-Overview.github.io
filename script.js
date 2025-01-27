@@ -16,31 +16,52 @@ function toggle(sec) {
   }
 }
 function performSearch(){
-  var search = document.getElementById("searchQuery").value;
-  search = search.toLowerCase();
-  if(search == ""){
-    alert("Please enter a search term");
-  }
-  else{
-    var docText = document.documentElement.textContent;
-    docText = docText.toLowerCase();
-    if(docText.includes(search)){
-      getSearchResults(search);
-    } else{
-      alert("No results found");
+  const input = document.getElementById('searchQuery').value.toLowerCase();
+  const sections = document.getElementsByClassName('section');
+  const resultsContainer = document.getElementById('searchResults');
+  resultsContainer.innerHTML = ''; // Clear previous results
+
+  for (let i = 0; i < sections.length; i++) {
+    const section = sections[i];
+    if (section.textContent.toLowerCase().includes(input)) {
+      const resultItem = document.createElement('div');
+      resultItem.textContent = section.textContent;
+      resultItem.classList.add('result-item');
+      resultItem.onclick = function() {
+        section.scrollIntoView({ behavior: 'smooth' });
+        section.style.display = 'block';
+      };
+      resultsContainer.appendChild(resultItem);
     }
   }
 }
-function getSearchResults(search){
-  const elements = document.getElementsByTagName('*');
-  for (let i = 0; i < elements.length; i++){
-    var text = elements[i].textContent;
-    text = text.toLowerCase();
-    if(text.includes(search)){
-      searchResults.push(text);
-    }
-  }
-  var results = document.getElementById("searchResults");
-  results.innerHTML = "";
-  
-}
+
+//carosuel
+// window.onload = function () {
+//     let slides = 
+//         document.getElementsByClassName('carousel-item');
+
+//     function addActive(slide) {
+//         slide.classList.add('active');
+//     }
+
+//     function removeActive(slide) {
+//         slide.classList.remove('active');
+//     }
+
+//     addActive(slides[0]);
+//     setInterval(function () {
+//         for (let i = 0; i < slides.length; i++) {
+//             if (i + 1 == slides.length) {
+//                 addActive(slides[0]);
+//                 setTimeout(removeActive, 350, slides[i]);
+//                 break;
+//             }
+//             if (slides[i].classList.contains('active')) {
+//                 setTimeout(removeActive, 350, slides[i]);
+//                 addActive(slides[i + 1]);
+//                 break;
+//             }
+//         }
+//     }, 1500);
+// };
