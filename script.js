@@ -15,8 +15,27 @@ function toggle(sec) {
     }
   }
 }
+document.getElementById('mainSearch').addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    if (input == '' || input == null || input == " ") {
+      return;
+    } else {
+      search(input);
+    }
+  }
+});
+
 function performSearch(){
   const input = document.getElementById('searchQuery').value.toLowerCase();
+  if (input == '' || input == null || input == " ") {
+    return;
+  } else {
+    search(input);
+  }
+}
+
+function search(input) {
+  
   const sections = document.getElementsByTagName('h2');
   const resultsContainer = document.getElementById('searchResults');
   resultsContainer.innerHTML = ''; // Clear previous results
@@ -30,12 +49,21 @@ function performSearch(){
       resultItem.onclick = function() {
         section.scrollIntoView({ behavior: 'smooth' });
         section.style.display = 'block';
+        section.classList.add('highlight');
       };
+      const innerElements = section.parentElement.children;
+      for (let j = 0; j < innerElements.length; j++) {
+        const innerElement = innerElements[j].textContent;
+        if(innerElement.includes(input)){
+          const innerResultItem = document.createElement('div');
+          innerResultItem.textContent = innerElement;
+          resultItem.appendChild(innerResultItem);
+        }
+      }
       resultsContainer.appendChild(resultItem);
     }
   }
 }
-
 //carosuel
 // window.onload = function () {
 //     let slides = 
