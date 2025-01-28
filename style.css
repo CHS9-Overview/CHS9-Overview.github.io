@@ -375,7 +375,13 @@ h3{
   cursor: pointer;
   font-weight: 400;
 }
-
+#searchResults{
+  display: block;
+  float: right;
+  margin-top: 1%;
+  clear:  right;
+  margin-right: 60px;
+}
 /*.semi-circle {
   width: 100%;
   height: 100px;
