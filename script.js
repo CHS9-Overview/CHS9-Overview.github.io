@@ -17,11 +17,7 @@ function toggle(sec) {
 }
 function performSearch(){
   const input = document.getElementById('searchQuery').value.toLowerCase();
-<<<<<<< HEAD
-  const sections = document.getElementsByClassName('section');
-=======
   const sections = document.getElementsByTagName('h2');
->>>>>>> 5f4f354 (normal update)
   const resultsContainer = document.getElementById('searchResults');
   resultsContainer.innerHTML = ''; // Clear previous results
 
