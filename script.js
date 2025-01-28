@@ -15,9 +15,10 @@ function toggle(sec) {
     }
   }
 }
-document.getElementById('mainSearch').addEventListener('keypress', function(event) {
+document.getElementById('mainSearch').addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
-    if (input == '' || input == null || input == " ") {
+    var input = document.getElementById('mainSearch').value.trim().toLowerCase();
+    if (input === '') {
       return;
     } else {
       search(input);
@@ -26,7 +27,7 @@ document.getElementById('mainSearch').addEventListener('keypress', function(even
 });
 
 function performSearch(){
-  const input = document.getElementById('searchQuery').value.toLowerCase();
+  var input = document.getElementById('mainSearch').value.trim().toLowerCase();
   if (input == '' || input == null || input == " ") {
     return;
   } else {
