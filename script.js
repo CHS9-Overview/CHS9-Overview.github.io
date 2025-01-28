@@ -15,17 +15,17 @@ function toggle(sec) {
     }
   }
 }
-document.getElementById('searchQuery').addEventListener('keydown', function(event) {
-  console.log('Key pressed:', event.key); // Debugging line
-  if (event.key === 'Enter') {
-    var input = document.getElementById('mainSearch').value.trim().toLowerCase();
-    if (input === '') {
-      return;
-    } else {
-      search(input);
-    }
-  }
-});
+// document.getElementById('searchQuery').addEventListener('keydown', function(event) {
+//   console.log('Key pressed:', event.key); // Debugging line
+//   if (event.key === 'Enter') {
+//     var input = document.getElementById('mainSearch').value.trim().toLowerCase();
+//     if (input === '') {
+//       return;
+//     } else {
+//       search(input);
+//     }
+//   }
+// });
 
 function performSearch(){
   var input = document.getElementById('searchQuery').value.trim().toLowerCase();
