@@ -15,7 +15,8 @@ function toggle(sec) {
     }
   }
 }
-document.getElementById('mainSearch').addEventListener('keydown', function(event) {
+document.getElementById('searchQuery').addEventListener('keydown', function(event) {
+  console.log('Key pressed:', event.key); // Debugging line
   if (event.key === 'Enter') {
     var input = document.getElementById('mainSearch').value.trim().toLowerCase();
     if (input === '') {
@@ -27,9 +28,8 @@ document.getElementById('mainSearch').addEventListener('keydown', function(event
 });
 
 function performSearch(){
-  var input = document.getElementById('mainSearch').value.trim().toLowerCase();
-  if (input == '' || input == null || input == " ") {
-    return;
+  var input = document.getElementById('searchQuery').value.trim().toLowerCase();
+  if (input == '') {
   } else {
     search(input);
   }
@@ -59,6 +59,12 @@ function search(input) {
           const innerResultItem = document.createElement('div');
           innerResultItem.textContent = innerElement;
           resultItem.appendChild(innerResultItem);
+          innerResultItem.classList.add('innerSearchResults')
+          innerResultItem.onclick = function() {
+            section.scrollIntoView({ behavior: 'smooth' });
+            section.style.display = 'block';
+            section.classList.add('highlight');
+          };
         }
       }
       resultsContainer.appendChild(resultItem);
