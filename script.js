@@ -100,3 +100,21 @@ function search(input) {
 //         }
 //     }, 1500);
 // };
+
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.getElementsByTagName('h2');
+  console.log(sections[0].textContent);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      console.log('checking entry:', entry.target.textContent); // Debugging line 
+      if (entry.isIntersecting) {
+        console.log('entry is intersecting:', entry.target.textContent); // Debugging line  
+        entry.target.classList.add('fade-in');
+      }
+    });
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
