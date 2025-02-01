@@ -9,11 +9,17 @@ function toggle(sec) {
       num = i.toString()+"0";
       const headers = document.getElementsByTagName('h2');
       for (let i = 0; i < headers.length; i++) {
-        if(headers[i].textContent != 'More Options' || headers[i].textContent != 'What&#39; Happening?')
-        headers[i].classList.add("highlight");
+        console.log(headers[i].textContent);
+        if(headers[i].textContent != 'More Options' || headers[i].textContent != 'What&#39; Happening?'){
+          headers[i].classList.add("highlight");
+          setTimeout(removeHighlight, 1000);
+        }
       }
     }
   }
+}
+function removeHighlight(){
+  headers[i].classList.remove("highlight");
 }
 // document.getElementById('searchQuery').addEventListener('keydown', function(event) {
 //   console.log('Key pressed:', event.key); // Debugging line
@@ -101,20 +107,20 @@ function search(input) {
 //     }, 1500);
 // };
 
-document.addEventListener('DOMContentLoaded', function() {
-  const sections = document.getElementsByTagName('h2');
-  console.log(sections[0].textContent);
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      console.log('checking entry:', entry.target.textContent); // Debugging line 
-      if (entry.isIntersecting) {
-        console.log('entry is intersecting:', entry.target.textContent); // Debugging line  
-        entry.target.classList.add('fade-in');
-      }
-    });
-  });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   const sections = document.getElementsByTagName('h2');
+//   console.log(sections[0].textContent);
+//   const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//       console.log('checking entry:', entry.target.textContent); // Debugging line 
+//       if (entry.isIntersecting) {
+//         console.log('entry is intersecting:', entry.target.textContent); // Debugging line  
+//         entry.target.classList.add('fade-in');
+//       }
+//     });
+//   });
+//   for (let i = 0; i < sections.length; i++) {
+//     let section = sections[i];
+//     observer.observe(section);
+//   }
+// });
