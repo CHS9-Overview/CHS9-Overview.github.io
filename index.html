@@ -8,17 +8,17 @@
 	</head>
 	<body id="body">
 		<div id = "body">
-		<div class="topnav">
-			<a class="active" href="index.html">Home</a>
-			<a onclick="toggle(7)" href="#7">About Us</a>
-			<a onclick="toggle(8)" href="#8">Contact</a>
-			<a onclick="toggle(9)" href="#9">News</a>
-			<a onclick="toggle(10)" href="#10">Tutorials</a>
-			<div>
-				<input type="text" id="searchQuery" placeholder="Search about CHS9" />
-				<button id="mainSearch" onclick="performSearch()">
-				<img id="searchIcon" src="https://codehs.com/uploads/645e73a8d9720e134d463770b168dbc8">
+			<div class="topnav">
+				<a class="active" href="index.html">Home</a>
+				<a onclick="toggle(7)" href="#7">About Us</a>
+				<a onclick="toggle(8)" href="#8">Contact</a>
+				<a onclick="toggle(9)" href="#9">News</a>
+				<div>
+					<input type="text" id="searchQuery" placeholder="Search about CHS9" />
+					<button id="mainSearch" onclick="performSearch()">
+					<img id="searchIcon" src="https://codehs.com/uploads/645e73a8d9720e134d463770b168dbc8">
 				</button>
+				</div>
 			</div>
 			<div id="searchResults"></div>
 		</div>
@@ -27,13 +27,13 @@
 			<img id="mainImage" src="https://codehs.com/uploads/45cc3e244b5627be1d536058f3a8ad80" alt=" CHS9" width="80%">
 		</center>
 		</p>
-		<h2>What's Happening?</h2>
+		<h2 class="noHighlight">What's Happening?</h2>
 		<div class="image-gallery">
 			<img src="https://codehs.com/uploads/2939d4d00ffa4af32b2643aa90db06a7" alt="October Everyday Champions">
 			<img src="https://codehs.com/uploads/cef07e705e814b1d7e14df6fd52bd350" alt="October Para Spotlight">
 			<img src="https://codehs.com/uploads/63457184a7b6594b9c1b5f107017066f" alt="October Teacher Spotlight">
 		</div>
-		<h2>More Options</h2>
+		<h2 class="noHighlight">More Options</h2>
 		<table id="choices">
 			<tr>
 				<td>
@@ -90,7 +90,7 @@
 				</td>
 			</tr>
 		</table>
-		<div id='1'>
+		<div id='1' class = 'section'>
 			<h2>Schedules</h2>
 			<button class="buttons">
 			<a href="https://drive.google.com/file/d/13kNORVZJ8OUd39eUHWmkEkR8FwEa9mb1/view?usp=drive_link"> Shuttle <br> Schedules </a>
@@ -99,7 +99,7 @@
 			<a href="https://docs.google.com/document/d/1t6dKIiZvi4mAEmd2z_-dYZ4S9QUjw29TyIpBjpbhM_c/edit?usp=sharing"> Bell <br> Schedule </a>
 			</button>
 		</div>
-		<div id='2'>
+		<div id='2' class = 'section'>
 			<h2 class="even">Lunch</h2>
 			<button class="buttons">
 			<a href="https://www.schoolpay.com/login"> SchoolPay </a>
@@ -108,7 +108,7 @@
 			<a href="https://coppellisd.nutrislice.com/menu/coppell-hs-9"> Lunch Menu </a>
 			</button>
 		</div>
-		<div id='3'>
+		<div id='3' class = 'section'>
 			<h2>Calendars</h2>
 			<button class="buttons">
 			<a href="https://drive.google.com/file/d/1Svl6ncxLftaTxH248wlXdaxZwqFzpwFb/view?usp=sharing"> A/B Day <br> Calendar </a>
@@ -117,16 +117,16 @@
 			<a href="https://drive.google.com/file/d/1aoqGIFc_CADmm652Ge8HMcxcc12ym3bv/view?usp=sharing"> 2024-2025 Calendar </a>
 			</button>
 		</div>
-		<div id='4'>
+		<div id='4' class = 'section'>
 			<h2 class="even">Staff</h2>
 			<p class = 'staffText'>Access CISD Staff Resources by signing in using your Coppell ISD credentials. </p>
 			<p>
-				<button class="buttons" id="resource">
-					<a href="https://accounts.coppellisd.com/">Resources</a>
+				<button class="buttons"  style="width:100%">
+				<a href="https://accounts.coppellisd.com/">Resources</a>
 				</button>
 			</p>
 		</div>
-		<div id='5'>
+		<div id='5' class = 'section'>
 			<h2>Parent Resources</h2>
 			<button class="buttons">
 			<a href="https://forms.coppellisd.com/Forms/newstudentenrollmentrequestK12New"> New Student Enrollment </a>
@@ -135,134 +135,153 @@
 			<a href="https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/3433/CISD/3158850/2024-2025_Back_to_School_Checklist.pdf.pdf"> Back <br> to School </a>
 			</button>
 		</div>
-		<div id='6'>
+		<div id='6' class = 'section'>
 			<h2 class="even">Student Resources</h2>
+			<button class="buttons">
+			<a href="https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/3433/CISD/3146058/24-25_handbook_12-24pdf.pdf"> Student<br>Handbook </a>
+			</button>
+			<button class="buttons">
+			<a href="https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/3433/CISD/3145953/2024-25_CISD_Code_of_Conduct.pdf"> Student Code<br>of Conduct </a>
+			</button>
+			<button class="buttons" style="width: 100%">
+				<a href="https://core-docs.s3.amazonaws.com/documents/asset/uploaded_file/3433/CISD/3145951/CISD_Student_Dress_Code.pdf"> Dress Code </a>
+			</button>
+			<button class="buttons">
+			<a href="https://core-docs.s3.amazonaws.com/documents/asset/uploaded_file/3433/CISD/3145951/CISD_Student_Dress_Code.pdf"> Schoology </a>
+			</button>
+			<button class="buttons">
+			<a href="https://core-docs.s3.amazonaws.com/documents/asset/uploaded_file/3433/CISD/3145951/CISD_Student_Dress_Code.pdf"> HAC </a>
+			</button>
+			
 		</div>
-		<div id='7'>
+		<div id='7' class = 'section'>
 			<h2>About Us</h2>
 			<table>
 				<tr>
-          <td>
-  					<div class="contactCard">
-  						<p class="contactImg"><img class="cImg" src="principal_image.png"></p>
-  						<p class = "caption"> 
-  							Principal: <br> Dr. Greg Axelson
-  							<br>
-                <br>
-  						<p class="email">
-  							<a href = "mailto:gaxelson@coppellisd.com" >gaxelson@coppellisd.com</a>
-  							<br>
-  							<a href="tel:2144963804"> 214-496-3804</a>
-                <br>
-  						</p>
-  						</p>
-  					</div>
-          </td>
-          <td>
-      			<div class="contactCard">
-      				<p class="contactImg"><img class="cImg" src="aprincipal_image.png">
-      				<p class = "caption"> 
-      					Assistant Principal <br> (Students: A-K): <br> Nathan Harvey
-      					<br>
-      				<p class="email">
-      					<a href = "mailto:nharvey@coppellisd.com" >nharvey@coppellisd.com</a>
-      					<br>
-      					<a href="tel:2144963829"> 214-496-3829</a>
-      				</p>
-      				</p>
-      			</div>
-          </td> 
-          <td>
-            <div class="contactCard">
-              <p class="contactImg"><img class="cImg" src="aprincipal_image2.png">
-              <p class = "caption"> 
-                Assistant Principal <br> (Students: L-Z): <br> Jessica Lynch
-                <br>
-              <p class="email">
-                <a href = "mailto:jlynch@coppellisd.com" >jlynch@coppellisd.com</a>
-                <br>
-                <a href="tel:2144963806"> 214-496-3806</a>
-              </p>
-              </p>
-            </div>
-          </td> 
-        </tr>
-        <tr>
-          <td>
-            <div class="contactCard">
-              <p class="contactImg"><img class="cImg" src="Generic-Profile.jpg"></p>
-              <p class = "caption"> 
-                Principal's Secretary <br> Stacy Haugh
-                <br>
-                <br>
-              <p class="email">
-                <a href = "mailto:shaugh@coppellisd.com" >shaugh@coppellisd.com</a>
-                <br>
-                <a href="tel:2144963828"> 214-496-3828</a>
-                <br>
-              </p>
-              </p>
-            </div>
-          </td>
-          <td>
-            <div class="contactCard">
-              <p class="contactImg"><img class="cImg" src="counselor_image.jpeg">
-              <p class = "caption"> 
-                Counselor <br> (Students: A-K): <br> Katie Walker
-                <br>
-              <p class="email">
-                <a href = "mailto:kwalker@coppellisd.com" >kwalker@coppellisd.com</a>
-                <br>
-                <a href="tel:2144963818"> 214-496-3818</a>
-              </p>
-              </p>
-            </div>
-          </td> 
-          <td>
-            <div class="contactCard">
-              <p class="contactImg"><img class="cImg" src="counselor_image2.jpeg">
-              <p class = "caption"> 
-                Counselor <br> (Students: L-Z): <br> Amy Blasingame
-                <br>
-              <p class="email">
-                <a href = "mailto:ablasingame@coppellisd.com" >ablasingame@coppellisd.com</a>
-                <br>
-                <a href="tel:2144963824"> 214-496-3824</a>
-              </p>
-              </p>
-            </div>
-          </td> 
-        </tr>
-      </table>
-			<div id='8'>
+					<td>
+						<div class="contactCard">
+							<p class="contactImg"><img class="cImg" src="principal_image.png"></p>
+							<p class = "caption"> 
+								Principal: <br> Dr. Greg Axelson
+								<br>
+								<br>
+							<p class="email">
+								<a href = "mailto:gaxelson@coppellisd.com" >gaxelson@coppellisd.com</a>
+								<br>
+								<a href="tel:2144963804"> 214-496-3804</a>
+								<br>
+							</p>
+							</p>
+						</div>
+					</td>
+					<td>
+						<div class="contactCard">
+							<p class="contactImg"><img class="cImg" src="aprincipal_image.png">
+							<p class = "caption"> 
+								Assistant Principal <br> (Students: A-K): <br> Nathan Harvey
+								<br>
+							<p class="email">
+								<a href = "mailto:nharvey@coppellisd.com" >nharvey@coppellisd.com</a>
+								<br>
+								<a href="tel:2144963829"> 214-496-3829</a>
+							</p>
+							</p>
+						</div>
+					</td>
+					<td>
+						<div class="contactCard">
+							<p class="contactImg"><img class="cImg" src="aprincipal_image2.png">
+							<p class = "caption"> 
+								Assistant Principal <br> (Students: L-Z): <br> Jessica Lynch
+								<br>
+							<p class="email">
+								<a href = "mailto:jlynch@coppellisd.com" >jlynch@coppellisd.com</a>
+								<br>
+								<a href="tel:2144963806"> 214-496-3806</a>
+							</p>
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="contactCard">
+							<p class="contactImg"><img class="cImg" src="Generic-Profile.jpg"></p>
+							<p class = "caption"> 
+								Principal's Secretary <br> Stacy Haugh
+								<br>
+								<br>
+							<p class="email">
+								<a href = "mailto:shaugh@coppellisd.com" >shaugh@coppellisd.com</a>
+								<br>
+								<a href="tel:2144963828"> 214-496-3828</a>
+								<br>
+							</p>
+							</p>
+						</div>
+					</td>
+					<td>
+						<div class="contactCard">
+							<p class="contactImg"><img class="cImg" src="counselor_image.jpeg">
+							<p class = "caption"> 
+								Counselor <br> (Students: A-K): <br> Katie Walker
+								<br>
+							<p class="email">
+								<a href = "mailto:kwalker@coppellisd.com" >kwalker@coppellisd.com</a>
+								<br>
+								<a href="tel:2144963818"> 214-496-3818</a>
+							</p>
+							</p>
+						</div>
+					</td>
+					<td>
+						<div class="contactCard">
+							<p class="contactImg"><img class="cImg" src="counselor_image2.jpeg">
+							<p class = "caption"> 
+								Counselor <br> (Students: L-Z): <br> Amy Blasingame
+								<br>
+							<p class="email">
+								<a href = "mailto:ablasingame@coppellisd.com" >ablasingame@coppellisd.com</a>
+								<br>
+								<a href="tel:2144963824"> 214-496-3824</a>
+							</p>
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div id='8' class = 'section'>
 				<h2 class="even">Contact</h2>
 				<table>
 					<tr>
 						<td>
 							<h3>Address</h3>
 							<p class="contactText">
-							1301 Wrangler Circle<br>
-							Coppell, TX 75019</p>
+								1301 Wrangler Circle<br>
+								Coppell, TX 75019
+							</p>
 						</td>
 						<td>
 							<h3>Contact Info</h3>
 							<p class="contactText" >Phone: (214) 496-3800 <br>
-							Email: shaugh@coppellisd.com</p>
+								Email: shaugh@coppellisd.com
+							</p>
 						</td>
 						<td>
 							<h3>Timings</h3>
 							<p class="contactText" >School Times <br>
-							8:50 a.m. - 4:15 p.m.</p>
+								8:50 a.m. - 4:15 p.m.
+							</p>
 						</td>
 					</tr>
 				</table>
 			</div>
-			<div id='9'>
+			<div id='9' class = 'section'>
 				<h2>News</h2>
 				<iframe src='https://widgets.sociablekit.com/rss-feed/iframe/25509166' frameborder='0' width='100%' height='800px'>      
 				</iframe>
 			</div>
-			<div id='10'>
+			<div id='10' class = 'section'>
 				<h2 class="even">Tutorials</h2>
 			</div>
 		</div>
