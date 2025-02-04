@@ -265,22 +265,6 @@ a {
 .buttons:hover {
   background-color: #735F3B;
   color: white;
-  animation: buttonHover 0.5s ease-in-out forwards;
-}
-
-@keyframes buttonHover {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  50% {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
 }
 
 #mainSearch {
@@ -317,9 +301,6 @@ a {
 }
 
 
-/* .even {
-  background-color: #D3D9D4;
-} */
 
 .caption{
   text-align: center;
@@ -329,10 +310,6 @@ a {
   color: #ffffff;
 }
 
-marquee{
-height: fit-content;
-width: 80%;
-}
 
 .email{
   color: #4e6897;
@@ -401,13 +378,18 @@ h3{
   font-weight: 400;
 }
 #searchResults{
-  margin-right: -30px;
   background-color: #D3D9D4;
-  margin-top: 40%;
-  cursor: pointer;
-  color: #686894;
-  text-decoration: underline;
-  position: fixed;
+    margin-top: 40%;
+    cursor: pointer;
+    color: #686894;
+    text-decoration: underline;
+    position: fixed;
+    margin-top: 7%;
+    z-index: 100000;
+    float: right;
+    margin-left: 77.5%;
+    height: 100%;
+    overflow-y: scroll;
 }
 #innerSearchResults{
   display: block;
@@ -416,20 +398,8 @@ h3{
   clear:  right;
   margin-right: 30px;
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.fade-in {
-  animation: fadeIn 2s ease-in-out forwards;
-}
+
 .contactCard:hover {
   animation: hoverEffect 0.5s ease forwards;
 }
@@ -456,6 +426,25 @@ h3{
     box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.7);
   }
 }
+
+.buttons:hover{
+  animation: buttonAnimation 0.5s ease;
+  opacity: 1;
+}
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    font-size: 5vw;
+  }
+  100% {
+    transform: scale(1);
+    font-size: 4.5vw;
+  }
+}
+
 
 /*.semi-circle {
   width: 100%;
