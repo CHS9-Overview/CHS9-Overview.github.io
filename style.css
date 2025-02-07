@@ -389,7 +389,6 @@ h3{
     margin-left: 77.5%;
     height: 100%;
     overflow-y: scroll;
-    display: none;
 }
 #innerSearchResults{
   display: block;
@@ -446,29 +445,3 @@ h3{
 }
 
 
-/*.semi-circle {
-  width: 100%;
-  height: 100px;
-  background-color:  #A3D9D4; 
-  border-top-left-radius:0%;
-  border-top-right-radius:0%;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  z-index: 8;
-}
-.semi-circle2 {
-  width: 100%;
-  height: 100px;
-  background-color:  #A3D9D4; 
-  border-top-left-radius: 50%;
-  border-top-right-radius:50%;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
-  z-index: 8;
-} */
-/* .result-item{
-  position: absolute;
-  background-color: white;
-  x: 0;
-  y: 10%;
-} */
