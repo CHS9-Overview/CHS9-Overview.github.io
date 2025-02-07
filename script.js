@@ -45,6 +45,7 @@ function search(input) {
   if(document.getElementById('searchResults').textContent != ''){
     document.getElementById('searchResults').innerHTML = '';
     document.getElementById('searchIcon').src = 'search.png';
+    document.getElementById('searchResults').style.display = 'none';
     return;
   }
   const sections = document.getElementsByClassName('section');
@@ -66,6 +67,7 @@ function search(input) {
           let br = document.createElement("br");
           resultsContainer.appendChild(br);
           resultsContainer.appendChild(result);
+          document.geteElementById('searchResults').style.display = 'block';
           result.addEventListener('click', function() {
             section.scrollIntoView({ behavior: 'smooth' });
           });
